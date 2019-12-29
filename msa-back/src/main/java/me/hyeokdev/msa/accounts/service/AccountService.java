@@ -6,7 +6,10 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -50,4 +53,5 @@ public class AccountService implements UserDetailsService {
 				.map(role -> new SimpleGrantedAuthority("ROLE_"+role.name()))
 				.collect(Collectors.toSet());
 	}
+
 }
