@@ -13,6 +13,11 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+
+  css : ['element-ui/lib/theme-chalk/index.css'],
+
+  plugins: ['@/plugins/element-ui.js'],
+
   /*
   ** Customize the progress bar color
   */
